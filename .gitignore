@@ -1,0 +1,7 @@
+# Secret key
+
+blog/key.py
+
+# Virtual Environment
+
+venv
