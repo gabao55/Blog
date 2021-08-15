@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': '',
@@ -144,5 +144,4 @@ MESSAGE_TAGS = {
     constants.DEBUG: 'alert-info',
     constants.SUCCESS: 'alert-success',
     constants.INFO: 'alert-info',
-
 }
