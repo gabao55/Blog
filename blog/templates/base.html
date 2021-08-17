@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt"><head>
+    <title>Beginning of Gabriel's Blog</title>
+
+
+</head>
+
+    {% include 'partial/_head.html'% }
+
+<body>
+
+    {% include 'partial/_nav.html' %}
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <!-- CONTENT -->
+            <div class="card-columns mt-4">
+                <!-- FOR LOOP -->
+                <div class="card">
+
+                    <a href="post.html">
+                        <img class="card-img-top" src="imagens/linux_system_hi-tech_73419_1280x720.jpg" alt="Card image cap">
+                    </a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="post.html">
+                                A wonderful serenity has taken possession of my entire soul
+                            </a>
+                        </h5>
+                        <p class="card-text">When, while the lovely valley teems with vapour around me, and the meridian
+                            sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray
+                            gleams steal ...</p>
+                        <p class="card-text">
+                            <small class="text-muted">hoje | 1 comentário | Tecnologia</small>
+                        </p>
+
+                        <div class="text-right">
+                            <a href="post.html" class="btn btn-outline-secondary">Ler mais...</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/FOR LOOP-->
+            </div>
+            <!--/CONTENT-->
+
+
+            <!-- _pagination.html -->
+            <div class="pagination">
+                <ul class="pagination">
+                    <li class="page-item active">
+                        <a class="page-link" href="?page=1">1</a>
+                    </li>
+
+
+                    <li class="page-item">
+                        <a class="page-link" href="?page=2">2</a>
+                    </li>
+
+
+                    <li class="page-item">
+                        <a class="page-link" href="?page=2">›</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page=2">»</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- _pagination.html -->
+
+        </div>
+    </div>
+</div>
+
+{% include 'partial/_footer.html' %}
+
+</body>
+</html>
