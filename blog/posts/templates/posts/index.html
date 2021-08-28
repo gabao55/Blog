@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load humanize %}
+{% load grfilters %}
 
 {% block content %}
     <!-- CONTENT -->
@@ -29,7 +30,7 @@
                     <p class="card-text">
                         <small class="text-muted">
                             {{ post.post_date|naturalday|title }} | 
-                            {{ post.comments_set.count }} comment(s)
+                            {{ post.comments_number|comments_plural }}
                             | 
                             {{ post.post_category }}
                         </small>
