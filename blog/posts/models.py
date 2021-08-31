@@ -24,21 +24,24 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
         self.resize_image(self.post_image, 800)
-
+    
     @staticmethod
     def resize_image(img_name, new_width):
-        img_path = os.path.join(settings.MEDIA_ROOT, img_name)
-        img = Image.open(img_path)
-        width, height = img.size
-        new_height = round((new_width * height) / width)
+        try:
+            img_path = os.path.join(settings.MEDIA_ROOT, str(img_name))
+            img = Image.open(img_path)
+            width, height = img.size
+            new_height = round((new_width * height) / width)
 
-        if width <= new_width:
-            img.close()
-            return
+            if width <= new_width:
+                img.close()
+                return
 
-        new_img = img.resize((new_width, new_height), Image.ANTIALIAS)
-        new_img.save(
-            img_path,
-            optimize=True,
-            quality=60
-        )
+            new_img = img.resize((new_width, new_height), Image.ANTIALIAS)
+            new_img.save(
+                img_path,
+                optimize=True,
+                quality=60
+            )
+        except:
+            pass
