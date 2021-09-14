@@ -6,6 +6,7 @@ of the app by clicking on the following link:<p>
 <p>However, the deployed version doesn't support images, so I recommend for a complete experience cloning the repo and running it by using the following commands:</p>
 
 ```
+cd blog
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
